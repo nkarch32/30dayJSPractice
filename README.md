@@ -7,3 +7,12 @@ Notes, findings, and observations relating to the exercises will go into this re
   <p><strong>Constructor:</strong> creates instance of a class, which is typically called an object; gets called when you declare an object using the 'new' keyword</p>
   <p><strong>.match():</strong> a very useful method; with 'regex' variable as argument, this method will find matches in an array according to the specified string pattern</p>
 </h4>
+<br/>
+<h3><strong> Day 7: Array Cardio Day #2 Notes </strong></h3>
+<h4>
+  <p><strong>array.prototype.every()</strong>: an array method that checks to see whether every element in an array meets the requirements of the function given to the method </p>
+  <p><strong>array.prototype.find()</strong>: an array method similar to the array.prototype.filter() method; however, instead of returning a subset, find() returns the first element it finds; takes a function as an argument</p>
+  <p><strong>array.prototype.some()</strong>: an array method that checks whether at least one element in an array meets the requirement of the function passed in as an argument</p>
+  <p><strong>array.prototype.findIndex()</strong>: an array method that finds the index number of whatever argument you give it</p>
+  <p><strong>Date object</strong>: here is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">link</a>, for future reference as I code, because the Date object is incredibly useful
+</h4>
