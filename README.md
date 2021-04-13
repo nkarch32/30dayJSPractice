@@ -16,7 +16,7 @@ Notes, findings, observations, brainstorms, connections, predictions, etc. relat
   <p><strong>array.prototype.findIndex()</strong>: an array method that finds the index number of whatever argument you give it</p>
   <p><strong>Date object</strong>: here is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">link</a>, for future reference as I code, because the Date object is incredibly useful
 </h4>
-
+<br/>
 <h3><strong> Day 8: Fun With HTML5 Canvas </strong></h3>
 <h4><i>*Idea: create a canvas program with buttons that trigger different effects (i.e. globalCompositeOperation effects).*</i></h4>
 
