@@ -1,5 +1,5 @@
 # 30dayJSPractice
-Notes, findings, and observations relating to the exercises will go into this readme file.
+Notes, findings, observations, brainstorms, connections, predictions, etc. relating to the exercises will go into this readme file.
 
 <h3><strong> Day 6: Ajax Type Ahead Notes </strong></h3>
 <h4>
@@ -15,4 +15,13 @@ Notes, findings, and observations relating to the exercises will go into this re
   <p><strong>array.prototype.some()</strong>: an array method that checks whether at least one element in an array meets the requirement of the function passed in as an argument</p>
   <p><strong>array.prototype.findIndex()</strong>: an array method that finds the index number of whatever argument you give it</p>
   <p><strong>Date object</strong>: here is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">link</a>, for future reference as I code, because the Date object is incredibly useful
+</h4>
+
+<h3><strong> Day 8: Fun With HTML5 Canvas </strong></h3>
+<h4><i>*Idea: create a canvas program with buttons that trigger different effects (i.e. globalCompositeOperation effects).*</i></h4>
+
+<h4>
+  <p><strong>Array Destructuring to set Variables:</strong></p>
+  <p><strong>HTMLCanvasElement.getContext()</strong>: this method returns a drawing context on a canvas (i.e., you can draw on a portion of the dom).</p>
+  <p><strong>HTML Canvas Methods:</strong> this <a href="https://www.w3schools.com/tags/ref_canvas.asp"> link</a> from w3schools illustrates different HTML canvas methods, including strokeStyle, offsetX, offsetY, etc.</p>
 </h4>
