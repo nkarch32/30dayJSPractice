@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+</head>
+<body>
+<canvas id="draw" width="800" height="800"></canvas>
+<script>
+    const canvas = document.querySelector('#draw'); //grabs the canvas
+    const ctx = canvas.getContext('2d'); //you actually draw on something called a context
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    ctx.strokeStyle = '#BADA55';
+    ctx.lineJoin = 'round'; //there are lots of options on MDN for lineJoin and lineCap
+    ctx.lineCap = 'round';
+
+    let isDrawing = false; //so that drawing only occurs when you click down, not when you are merely hovering your cursor
+    let lastX = 0; 
+    let lastY = 0;
+    let hue = 0;
+    let direction = true; 
+
+/*
+* This code block dictates the behavior of the mouse: 
+* the canvas will only recognize a drawing when
+* the mouse is clicked and held down (clicked and dragged) inside the canvas area.
+*/
+    function draw(e) {
+        if (!isDrawing) return; //stops function from running when the mouse is not down (i.e. clicked down)
+        console.log(e);
+        ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`; //starts the stroke at hue of 0 (red)
+        ctx.lineWidth = hue;
+        ctx.beginPath(); //starts up the line
+        ctx.moveTo(lastX, lastY); //goes to 
+        ctx.lineTo(e.offsetX, e.offsetY); //values are properties of the event
+        ctx.stroke(); //we won't actually see anything on the page until we call stroke()
+        
+        //we need to update the values of lastX and lastY to the final positions of both points
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+        
+        hue++; //increments hue as drawing progresses -- this is how you get the rainbow effect!
+        //will restart hue back to 0 (red)
+        if (hue >= 360) {
+            hue = 0;
+        }
+
+        if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+            direction = !direction;
+        } //when the line width reaches these values, the direction gets flipped (line thicker or thinner)
+
+        if (direction) {
+            ctx.lineWidth++;
+        } else {
+            ctx.lineWidth--;
+        }
+    }
+
+    canvas.addEventListener('mousemove', draw); //every time the mouse is moved, draw function is triggered
+    //if we don't update the lastX and lastY variables to be where the cursor last was,
+    //then you won't be able to draw a continuous line
+    canvas.addEventListener('mousedown', (e) => {
+        isDrawing = true;
+        [lastX, lastY] = [e.offsetX, e.offsetY];  
+    });
+    canvas.addEventListener('mouseup', () => isDrawing = false);
+    canvas.addEventListener('mouseout', () => isDrawing = false); //when you mouse out of the drawing, the drawing stops
+</script>
+
+<style>
+  html, body {
+    margin: 0;
+  }
+</style>
+
+</body>
+</html>
