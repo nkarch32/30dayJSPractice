@@ -25,3 +25,12 @@ Notes, findings, observations, brainstorms, connections, predictions, etc. relat
   <p><strong>HTMLCanvasElement.getContext()</strong>: this method returns a drawing context on a canvas (i.e., you can draw on a portion of the dom).</p>
   <p><strong>HTML Canvas Methods:</strong> this <a href="https://www.w3schools.com/tags/ref_canvas.asp"> link</a> from w3schools illustrates different HTML canvas methods, including strokeStyle, offsetX, offsetY, etc.</p>
 </h4>
+
+<h3><strong>Day 11: Custom HTML5 Video Player</strong></h3>
+<h4>
+  <ul>
+    <li>data-skip attribute -- what other data attributes are there for button elements?</li>
+    <li>querySelector v. .getElementById?</li>
+    <li>player.querySelectorAll('[data-skip]'); -- brackets indicate an attribute</li>
+    <li>parseFloat() --> converts string to number value</li>
+  </ul>
