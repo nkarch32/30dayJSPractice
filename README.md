@@ -34,3 +34,12 @@ Notes, findings, observations, brainstorms, connections, predictions, etc. relat
     <li>player.querySelectorAll('[data-skip]'); -- brackets indicate an attribute</li>
     <li>parseFloat() --> converts string to number value</li>
   </ul>
+  
+  <h3><strong>Day 12: Key Sequence Detection</strong></h3>
+<h4>
+  <ul>
+    <li>i.e., Konami Code that, when entered, triggers an interesting Easter Egg on webpages</li>
+    <li>review .push, .splice, .join methods</li>
+    <li>cornify_add() --> amazing</li>
+  </ul>
+
