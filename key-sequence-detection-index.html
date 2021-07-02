@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+
+    const keysThatUserPressed = []; //set up what the user presses as an array 
+    const secretCode = 'tacocat'; //the sequence
+    window.addEventListener('keyup', (e) => {
+    keysThatUserPressed.push(e.key); //takes what the user presses and pushes it into the 'keysThatUserPressed' array
+    console.log(keysThatUserPressed);
+    keysThatUserPressed.splice(-secretCode.length - 1, keysThatUserPressed.length - secretCode.length); //gives us the exact number needed
+    const userInput = keysThatUserPressed.toString();
+    if (keysThatUserPressed.join('').includes(secretCode)) {
+        console.log('The best palindrome!');
+        cornify_add(); //amazing -- unicorns all over your webpage
+    }
+    console.log(keysThatUserPressed);
+});
+
+</script>
+</body>
+</html>
