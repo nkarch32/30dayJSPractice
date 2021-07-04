@@ -34,12 +34,26 @@ Notes, findings, observations, brainstorms, connections, predictions, etc. relat
     <li>player.querySelectorAll('[data-skip]'); -- brackets indicate an attribute</li>
     <li>parseFloat() --> converts string to number value</li>
   </ul>
+ </h4>
   
-  <h3><strong>Day 12: Key Sequence Detection</strong></h3>
+<h3><strong>Day 12: Key Sequence Detection</strong></h3>
 <h4>
   <ul>
     <li>i.e., Konami Code that, when entered, triggers an interesting Easter Egg on webpages</li>
     <li>review .push, .splice, .join methods</li>
     <li>cornify_add() --> amazing</li>
   </ul>
+ </h4>
 
+<h3><strong>Day 14: Javascript references v. copies</strong></h3>
+<h4>Some handy ways to copy arrays without altering the original arrays:
+   <ul>
+    <li>const copyOfOriginalArray1 = originalArray.slice();</li>
+    <li>const copyOfOriginalArray2 = [].concat(originalArray);</li>
+    <li>const copyOfOriginalArray3 = [...originalArray];</li>
+  </ul>
+  To copy an object with simple, unnested properties:
+  <ul>
+    <li>const copyOfOriginalObject = Object.assign({}, originalObject, { whateverPropertyYouWishToChange: 'thisWillNotChangeTheOriginalObject' };</li>
+  </ul>
+ </h4>
